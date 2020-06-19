@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login to Notebook</title>
+        <style>
+            div {
+                margin: auto;
+                text-align: center;
+                width: 300px;
+                background-color: #f0eded;
+                border: 1px solid black;
+                padding: 15px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-left: -170px;
+                margin-top: -190px;
+            }
+            table {
+                width: 300px;
+                text-align: center;
+                padding: 15px;
+            }
+            td {
+                padding: 15px;
+            }
+            #username, #pwd {
+                width: 200px;
+                height: 30px;
+                text-align: center;
+            }
+            #btnlogin {
+                width: 60px;
+                height: 35px;
+            }
+            a {
+                color: #3252a8;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h2>Welcome to Your Notebook</h2>
+            <form action="http://127.0.0.1:5000/login" method="POST">
+                <table>
+                    <tr>
+                        <td>
+                            <input type="text" placeholder="Username" name="username" id="username" autocomplete="off">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="password" placeholder="Password" name="password" id="pwd">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="Login" id="btnlogin">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="http://127.0.0.1:5000/v_signup">Don't have an account? Sign up</a>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

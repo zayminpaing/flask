@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Your Notebook</title>
+    </head>
+    <style>
+        div {
+            margin: auto;
+            text-align: center;
+            width: 300px;
+            height: 50%;
+            background-color: #f0eded;
+            border: 1px solid black;
+            padding: 15px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -170px;
+            margin-top: -190px;
+        }
+        h3 {
+            position: absolute;
+            top: 13%;
+            left: 39%;
+        }
+        #btnexit {
+                width: 60px;
+                height: 35px;
+                margin-top: 15px;
+        }
+    </style>
+    <body>
+        <h3>{{ user }}, This is your notebook.</h3>
+        <form action="/exit" method="POST">
+            <textarea name="user" style="visibility: hidden;">{{ user }}</textarea>
+            <div>
+                <textarea rows="18" cols="39" name="txt">{{ n }}</textarea>
+                <input type="submit" value="Exit" id="btnexit">
+            </div>
+        </form>
+    </body>
+</html>
